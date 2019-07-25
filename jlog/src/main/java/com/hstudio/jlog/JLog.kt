@@ -10,42 +10,42 @@ object JLog {
         exception.printStackTrace()
     }
 
-    fun printStackTrace(message: String) {
+    fun printStackTrace(message: String?) {
         val exception = Exception(message)
         exception.printStackTrace()
     }
 
-    fun d(tag: String, message: String) {
+    fun d(tag: String, message: String? = null) {
         if (!IS_DEBUG) return
         val log = beautifyLog(message)
         Log.d(tag, log)
     }
 
-    fun e(tag: String, message: String) {
+    fun e(tag: String, message: String? = null) {
         if (!IS_DEBUG) return
         val log = beautifyLog(message)
         Log.e(tag, log)
     }
 
-    fun i(tag: String, message: String) {
+    fun i(tag: String, message: String? = null) {
         if (!IS_DEBUG) return
         val log = beautifyLog(message)
         Log.i(tag, log)
     }
 
-    fun w(tag: String, message: String) {
+    fun w(tag: String, message: String? = null) {
         if (!IS_DEBUG) return
         val log = beautifyLog(message)
         Log.w(tag, log)
     }
 
-    fun v(tag: String, message: String) {
+    fun v(tag: String, message: String? = null) {
         if (!IS_DEBUG) return
         val log = beautifyLog(message)
         Log.v(tag, log)
     }
 
-    private fun beautifyLog(message: String): String {
+    private fun beautifyLog(message: String?): String {
         val ste = Thread.currentThread().stackTrace[4]
         val sb = StringBuilder()
         sb.append("(")
