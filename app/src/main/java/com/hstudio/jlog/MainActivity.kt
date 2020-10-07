@@ -1,6 +1,6 @@
 package com.hstudio.jlog
 
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 
 class MainActivity : AppCompatActivity() {
@@ -9,5 +9,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         JLog.i("HJ", "Hello World!")
+        JLog.i("Hello World!")
+        JLog.i("HJ")
+        JLog.i(tag = "HJ", message = "Hello World")
+        JLog.printStackTrace()
+        JLog.printStackTrace("Hi")
     }
 }
