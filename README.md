@@ -23,7 +23,7 @@ App gradle
 ```
 dependencies {
   ...
-  implementation 'com.github.ggjjack:jlog:1.0.2'
+  implementation 'com.github.ggjjack:jlog:1.0.3'
   ...
 }
 ```
